@@ -22,8 +22,7 @@ const register = async(req,res) => {
 
         res.status(201).json({
             status: "OK",
-            newUser,
-            derbistoken,
+            newUser
         })
     } catch (error) {
         return res.status(500).json({message: error.message})
@@ -33,7 +32,7 @@ const register = async(req,res) => {
 
 const login = async (req,res) => {
     try {
-        const {password} = req.body;
+        const{password} = req.params;
         const user = await Auth.findOne({password})
         if(!user){
             return res.status(500).json({message: "Parola kayıtlı değil."})
