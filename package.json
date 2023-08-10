@@ -4,10 +4,10 @@
   "description": "JS",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "barandenizdogan",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",

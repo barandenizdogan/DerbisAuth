@@ -3,7 +3,6 @@ const {register, login, showUsers, findUser, updateUser, deleteUser} = require('
 
 const router = express.Router();
 
-// post update get delete
 router.post('/register', register)
 router.get('/login/:password', login)
 router.get('/users', showUsers)

@@ -17,10 +17,7 @@ app.get('/', (req,res) =>{
     res.json({message: "Çalışıyorum elleşme.."})
 })
 
-const PORT = process.env.PORT || 3000;
 
-db()
+db();
 
-app.listen(PORT, () => {
-    console.log(`Server started on port ${PORT}`);
-});   
+app.listen();
