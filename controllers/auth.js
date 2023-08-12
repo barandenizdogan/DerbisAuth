@@ -28,6 +28,20 @@ const register = async(req,res) => {
     }
 }
 
+const addDerbisPassword = async(req,res) => {
+    try {
+        const {username} = req.params;
+        const updatedUser = await Auth.findOneAndUpdate({username},req.body,{new: true})
+        res.status(200).json({
+            status: "OK",
+            updatedUser
+        })
+    } catch (error) {
+        return res.status(500).json({message: error.message})
+    }
+}
+
+
 const login = async (req,res) => {
     try {
         const{password} = req.params;
@@ -94,4 +108,4 @@ const deleteUser = async(req,res) => {
     }
 }
 
-module.exports = {register, login, showUsers, findUser, updateUser, deleteUser}
+module.exports = {register, login, showUsers, findUser, updateUser, deleteUser, addDerbisPassword}

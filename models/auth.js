@@ -13,7 +13,15 @@ const AuthSchema = new mongoose.Schema({
     },
     derbistoken: {
         type: String
+    },
+    derbisusername: {
+        type: String
+    },
+    derbispassword: {
+        type: String
     }
+
+
 })
  
 module.exports = mongoose.model('auth', AuthSchema);
