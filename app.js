@@ -11,12 +11,14 @@ app.use(express.urlencoded({limit:'30mb',extended: true}));
 
 app.use('/', Auth)
 
-app.get('/', (req,res) =>{
-    res.json({message: "Çalışıyorum elleşme.."})
+app.get('/easteregg', (req,res) =>{
+    res.json({message: "Özkanın amk"})
 })
 
 
 db();
 
 
-app.listen();
+app.listen(
+    3000
+);
